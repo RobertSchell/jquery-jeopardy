@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery-jeopardy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    
+    <form>
+    <h1>JEOPARDY!</h1>
+    <h2 id="scoreKeeper"></h2>
+    <div id="container">
+        <button id="row1" class="r1c1">$100</button>
+        <button id="row1" class="r1c2">$100</button>
+        <button id="row1" class="r1c3">$100</button>
+        <button id="row1" class="r1c4">$100</button>
+        <button id="row1" class="r1c5">$100</button>
+        <button id="row2" class="r2c1">$200</button>
+        <button id="row2" class="r2c2">$200</button>
+        <button id="row2" class="r2c3">$200</button>
+        <button id="row2" class="r2c4">$200</button>
+        <button id="row2" class="r2c5">$200</button>
+        <button id="row3" class="r3c1">$400</button>
+        <button id="row3" class="r3c2">$400</button>
+        <button id="row3" class="r3c3">$400</button>
+        <button id="row3" class="r3c4">$400</button>
+        <button id="row3" class="r3c5">$400</button>
+        <button id="row4" class="r4c1">$600</button>
+        <button id="row4" class="r4c2">$600</button>
+        <button id="row4" class="r4c3">$600</button>
+        <button id="row4" class="r4c4">$600</button>
+        <button id="row4" class="r4c5">$600</button>
+        <button id="row5" class="r5c1">$800</button>
+        <button id="row5" class="r5c2">$800</button>
+        <button id="row5" class="r5c3">$800</button>
+        <button id="row5" class="r5c4">$800</button>
+        <button id="row5" class="r5c5">$800</button>
+    </div>
+    <br>
+    <div id="questionRow"></div>
+    <br>
+    <div id="submitRow">YOUR ANSWER 
+        <input id="userInput" type="text" autocomplete="off" placeholder="Enter Your Answer Here"> 
+        <input id="submitButton" type="submit">
+    </div>
+</form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+</body>
+</html>
