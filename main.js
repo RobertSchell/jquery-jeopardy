@@ -22,6 +22,8 @@ let readJeopardyData = async () => {
     for (let i = 0; i < 5; i++){
         row1[i].addEventListener("click", (event) => {
             event.preventDefault();
+            //following line to disable container buttons once clicked
+            event.target.setAttribute("disabled", true);
             let array = [];
             array.push(groupedData.$100[Math.round(Math.random() * 500)]);
             let answer = array[0].answer;
@@ -45,6 +47,7 @@ let readJeopardyData = async () => {
     for (let i = 0; i < 5; i++){
         row2[i].addEventListener("click", (event) => {
             event.preventDefault();
+            event.target.setAttribute("disabled", true);
             let array = [];
             array.push(groupedData.$200[Math.round(Math.random() * 500)]);
             let answer = array[0].answer;
@@ -55,7 +58,7 @@ let readJeopardyData = async () => {
             submitButton.addEventListener("click", (event) => {
                 event.preventDefault();
                 if(input.value.toLowerCase() === answer.toLowerCase()){
-                    score += parseInt(arr[0].value.substr(1));
+                    score += parseInt(array[0].value.substr(1));
                     scoreKeeper.innerHTML = `Your Score: $${score}`;
                     questionRow.innerHTML = "Correct!";
                 }else{
@@ -68,6 +71,7 @@ let readJeopardyData = async () => {
     for (let i = 0; i < 5; i++){
         row3[i].addEventListener("click", (event) => {
             event.preventDefault();
+            event.target.setAttribute("disabled", true);
             let array = [];
             array.push(groupedData.$400[Math.round(Math.random() * 500)]);
             let answer = array[0].answer;
@@ -91,10 +95,13 @@ let readJeopardyData = async () => {
     for (let i = 0; i < 5; i++){
         row4[i].addEventListener("click", (event) => {
             event.preventDefault();
+            event.target.setAttribute("disabled", true);
             let array = [];
             array.push(groupedData.$600[Math.round(Math.random() * 500)]);
             let answer = array[0].answer;
             questionRow.innerHTML = array[0].question;
+            console.log(array[0].question);
+            console.log(answer);
 
             submitButton.addEventListener("click", (event) => {
                 event.preventDefault();
@@ -112,10 +119,13 @@ let readJeopardyData = async () => {
     for (let i = 0; i < 5; i++){
         row5[i].addEventListener("click", (event) => {
             event.preventDefault();
+            event.target.setAttribute("disabled", true);
             let array = [];
             array.push(groupedData.$800[Math.round(Math.random() * 500)]);
             let answer = array[0].answer;
             questionRow.innerHTML = array[0].question;
+            console.log(array[0].question);
+            console.log(answer);
 
             submitButton.addEventListener("click", (event) => {
                 event.preventDefault();
@@ -132,7 +142,7 @@ let readJeopardyData = async () => {
 }
 readJeopardyData();
 
-//add mouseover/mouseout/highlight function
+//add mouseover/mouseout/highlight function for fun
 container.addEventListener("mouseover", (event) => {
     event.target.style.background = "gray";
 })
